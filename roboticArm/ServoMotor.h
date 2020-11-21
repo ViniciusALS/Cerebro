@@ -15,6 +15,8 @@ class ServoMotor {
 
     private:
         Servo _myServo;
+        const int _servoDelaySpeed = 10;
+        int _previousAngle;
         int _angle;
         int _minAngle, _maxAngle;
 };

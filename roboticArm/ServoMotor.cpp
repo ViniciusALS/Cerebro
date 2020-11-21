@@ -19,5 +19,23 @@ void ServoMotor::begin(int pin, int minAngle, int maxAngle) {
 
 void ServoMotor::moveToPosition(byte value){
     _angle = map(value, 0, 255, _minAngle, _maxAngle);
-    _myServo.write(_angle);
+
+    if (_angle >= _previousAngle){
+        for (int i = _previousAngle+1; i <= _angle; i++){
+            _myServo.write(i);
+            delay(_servoDelaySpeed);
+        }
+    }
+    else {
+        for (int i = _previousAngle-1; i >= _angle; i--){
+            _myServo.write(i);
+            delay(_servoDelaySpeed);
+        }
+    }
+    
+    _previousAngle = _angle;
+    
+//    Serial.print("servo moved to: ");
+//    
+//    Serial.println(_angle);
 }
