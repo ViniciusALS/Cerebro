@@ -13,7 +13,7 @@ class Arm {
         ~Arm();
 
         void begin();
-       
+
         void move();
         void wait();
        

@@ -25,9 +25,6 @@ void Arm::_grab() {
     delay(500);
     _myClaw.close();
     delay(500);
-    _frontArmServo.moveToPosition(_FrontArmPosition.GRAB_RETRACTED_HIGH);
-    _backArmServo.moveToPosition(_BackArmPosition.GRAB_RETRACTED_HIGH);
-    delay(500);
 }
 
 void Arm::_raise() {
@@ -39,16 +36,13 @@ void Arm::_raise() {
 
 void Arm::_lower() {
 
-    _frontArmServo.moveToPosition(_FrontArmPosition.GRAB_RETRACTED_HIGH);
-    _backArmServo.moveToPosition(_BackArmPosition.GRAB_RETRACTED_HIGH);
+    _frontArmServo.moveToPosition(_FrontArmPosition.GRAB_RETRACTED_LOW);
+    _backArmServo.moveToPosition(_BackArmPosition.GRAB_RETRACTED_LOW);
     delay(500);
 }
 
 void Arm::_drop() {
-
-    _frontArmServo.moveToPosition(_FrontArmPosition.GRAB_RETRACTED_LOW);
-    _backArmServo.moveToPosition(_BackArmPosition.GRAB_RETRACTED_LOW);
-    delay(500);
+    
     _myClaw.open();
     delay(500);
     _frontArmServo.moveToPosition(_FrontArmPosition.RETRACTED_LOW);
