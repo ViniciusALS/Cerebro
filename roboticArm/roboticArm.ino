@@ -1,6 +1,8 @@
 #include "Arm.h"
 
  
+String choice;
+
 // Instanciate parts of robotic arm
 Arm myArm;
 
