@@ -19,7 +19,6 @@ class Arm {
         
         ServoMotor _frontArmServo;
         ServoMotor _backArmServo;
-
         Claw _myClaw;
         
         const int _frontArmMinAngle = 0;
