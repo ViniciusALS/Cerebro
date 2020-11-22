@@ -15,9 +15,7 @@ Potentiometer bottomPot(BOTTOM_POT_PIN);
 Arm myArm;
 
 // Instanciate servos
-ServoMotor frontArmServo;
-ServoMotor backArmServo;
-//ServoMotor bottomServo;
+ServoMotor bottomServo;
 
 
 void setup() {
@@ -26,24 +24,14 @@ void setup() {
         Serial.begin(9600);
     }
 
-//    myClaw.begin();
     myArm.begin();
-
-//    frontArmServo.begin(FRONT_ARM_SERVO_PIN, 0, 150);
-//    backArmServo.begin(BACK_ARM_SERVO_PIN, 0, 170);
 //    bottomServo.begin(BOTTOM_SERVO_PIN, 0, 180);
 }
 
 void loop() {
 
-//    // Testing claw
-//    clawPot.read();
-//    if (clawPot.getValue() > 125) {
-//        myClaw.open();
-//    }
-//    else {
-//        myClaw.close();
-//    }
+    bottomPot.read();
+    bottomServo.moveToPosition(bottomPot.getValue());
 
     myArm.retract();
     delay(1000);
@@ -55,16 +43,8 @@ void loop() {
     delay(1000);
     myArm.drop();
 
-//    frontArmPot.read();
-//    frontArmServo.moveToPosition(frontArmPot.getValue());
-//
-//    backArmPot.read();
-//    backArmServo.moveToPosition(backArmPot.getValue());
 
-//    bottomPot.read();
-//    bottomServo.moveToPosition(bottomPot.getValue());
 
-//    myArm.
 
 
 //    Serial.println(clawPot.getValue());
