@@ -5,8 +5,8 @@ Arm::Arm() {}
 Arm::~Arm() {}
 
 void Arm::begin() {
-    _frontArmServo.begin(FRONT_ARM_SERVO_PIN, frontArmMinAngle, frontArmMaxAngle);
-    _backArmServo.begin(BACK_ARM_SERVO_PIN, backArmMinAngle, backArmMaxAngle);
+    _frontArmServo.begin(FRONT_ARM_SERVO_PIN, _frontArmMinAngle, _frontArmMaxAngle);
+    _backArmServo.begin(BACK_ARM_SERVO_PIN, _backArmMinAngle, _backArmMaxAngle);
     _myClaw.begin();
 }
 

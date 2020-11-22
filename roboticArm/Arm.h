@@ -22,11 +22,11 @@ class Arm {
 
         Claw _myClaw;
         
-        const int frontArmMinAngle = 0;
-        const int frontArmMaxAngle = 150;
+        const int _frontArmMinAngle = 0;
+        const int _frontArmMaxAngle = 150;
 
-        const int backArmMinAngle = 0;
-        const int backArmMaxAngle = 170;
+        const int _backArmMinAngle = 0;
+        const int _backArmMaxAngle = 170;
 
         struct _FrontArmPosition { 
             const int RETRACTED_LOW = 35;
