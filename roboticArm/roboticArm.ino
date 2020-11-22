@@ -15,22 +15,14 @@ void setup() {
 
 void loop() {
 
-    bottomPot.read();
-    bottomServo.moveToPosition(bottomPot.getValue());
+    while (Serial.available() > 0) {
+        choice = Serial.readString();
 
-    myArm.retract();
-    delay(1000);
-    myArm.grab();
-    delay(1000);
-    myArm.raise();
-    delay(1000);
-    myArm.lower();
-    delay(1000);
-    myArm.drop();
+        myArm.move(choice);
 
-
-
-
+        Serial.print("You entered: ");
+        Serial.println(choice);
+    }
 
     if (Serial.available <= 0){
         myArm.wait();
