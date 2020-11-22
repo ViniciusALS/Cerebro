@@ -4,18 +4,9 @@
 #include "Claw.h"
 #include "Arm.h"
 
-// Instanciate potentiometers
-Potentiometer clawPot(CLAW_POT_PIN);
-Potentiometer frontArmPot(FRONT_ARM_POT_PIN);
-Potentiometer backArmPot(BACK_ARM_POT_PIN);
-Potentiometer bottomPot(BOTTOM_POT_PIN);
-
+ 
 // Instanciate parts of robotic arm
-//Claw myClaw;
 Arm myArm;
-
-// Instanciate servos
-ServoMotor bottomServo;
 
 
 void setup() {
@@ -25,7 +16,6 @@ void setup() {
     }
 
     myArm.begin();
-//    bottomServo.begin(BOTTOM_SERVO_PIN, 0, 180);
 }
 
 void loop() {
@@ -47,11 +37,9 @@ void loop() {
 
 
 
-//    Serial.println(clawPot.getValue());
-//    Serial.println(frontArmPot.getValue());
-//    Serial.println(backArmPot.getValue());
-//    Serial.println(bottomPot.getValue());
-    Serial.println();
+    if (Serial.available <= 0){
+        myArm.wait();
+    }
 
     delay(1000);
 }
