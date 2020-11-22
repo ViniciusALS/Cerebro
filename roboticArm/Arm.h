@@ -9,62 +9,11 @@
 class Arm {
 
     public:
-        Arm() {}
-        
-        ~Arm() {}
+        Arm();  
+        ~Arm();
 
-        void begin() {
-            _frontArmServo.begin(FRONT_ARM_SERVO_PIN, frontArmMinAngle, frontArmMaxAngle);
-            _backArmServo.begin(BACK_ARM_SERVO_PIN, backArmMinAngle, backArmMaxAngle);
-            _myClaw.begin();
-        }
-
-        void retract(){
-            
-            _myClaw.open();
-            _frontArmServo.moveToPosition(_FrontArmPosition.RETRACTED_LOW);
-            _backArmServo.moveToPosition(_BackArmPosition.RETRACTED_LOW);
-            delay(500);
-        }
-        
-        void grab(){
-
-            _frontArmServo.moveToPosition(_FrontArmPosition.GRAB_RETRACTED_LOW);
-            _backArmServo.moveToPosition(_BackArmPosition.GRAB_RETRACTED_LOW);
-            delay(500);
-            _myClaw.close();
-            delay(500);
-            _frontArmServo.moveToPosition(_FrontArmPosition.GRAB_RETRACTED_HIGH);
-            _backArmServo.moveToPosition(_BackArmPosition.GRAB_RETRACTED_HIGH);
-            delay(500);
-        }
-        
-        void raise(){
-
-            _frontArmServo.moveToPosition(_FrontArmPosition.RAISED);
-            _backArmServo.moveToPosition(_BackArmPosition.RAISED);   
-            delay(500);
-        }
-        
-        void lower(){
-
-            _frontArmServo.moveToPosition(_FrontArmPosition.GRAB_RETRACTED_HIGH);
-            _backArmServo.moveToPosition(_BackArmPosition.GRAB_RETRACTED_HIGH);   
-            delay(500);
-        }
-        
-        void drop(){
-
-            _frontArmServo.moveToPosition(_FrontArmPosition.GRAB_RETRACTED_LOW);
-            _backArmServo.moveToPosition(_BackArmPosition.GRAB_RETRACTED_LOW);
-            delay(500);
-            _myClaw.open();
-            delay(500);
-            _frontArmServo.moveToPosition(_FrontArmPosition.RETRACTED_LOW);
-            _backArmServo.moveToPosition(_BackArmPosition.RETRACTED_LOW);
-            delay(500);
-        }
-        
+        void begin();
+       
 
     private:
         
@@ -92,6 +41,13 @@ class Arm {
             const int GRAB_RETRACTED_HIGH = 200;
             const int RAISED = 135;
         } _BackArmPosition;
+
+
+        void _retract();        
+        void _grab();        
+        void _raise();        
+        void _lower();
+        void _drop();
 };
 
 #endif
