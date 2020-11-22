@@ -14,6 +14,9 @@ class Arm {
 
         void begin();
        
+        void move();
+        void wait();
+       
 
     private:
         
