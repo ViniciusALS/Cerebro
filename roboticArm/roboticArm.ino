@@ -1,7 +1,3 @@
-#include "PINS.h"
-#include "ServoMotor.h"
-#include "Potentiometer.h"
-#include "Claw.h"
 #include "Arm.h"
 
  
