@@ -31,14 +31,12 @@ class Arm {
         struct _FrontArmPosition { 
             const int RETRACTED_LOW = 35;
             const int GRAB_RETRACTED_LOW = 70;
-            const int GRAB_RETRACTED_HIGH = 95;
             const int RAISED = 255;
         } _FrontArmPosition;
             
         struct _BackArmPosition { 
             const int RETRACTED_LOW = 212;
             const int GRAB_RETRACTED_LOW = 220;
-            const int GRAB_RETRACTED_HIGH = 200;
             const int RAISED = 135;
         } _BackArmPosition;
 
