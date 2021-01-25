@@ -13,8 +13,8 @@ class Base {
 
         void init();
 
-        void turnLeft(int increment = 10);
-        void turnRight(int increment = 10);
+        void turnLeft();
+        void turnRight();
 
     private:
         ServoMotor _baseServo;
@@ -22,6 +22,8 @@ class Base {
         const int _baseMinAngle = 5;
         const int _baseMaxAngle = 180;
 
+        const int _positionIncrement = 10;
+        
         int _basePosition = 120;
 };
 

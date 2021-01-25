@@ -11,12 +11,12 @@ void Base::init() {
     _baseServo.moveToPosition(_basePosition);
 }
 
-void Base::turnLeft(int increment = 10) {
-    _basePosition -= increment;
+void Base::turnLeft() {
+    _basePosition -= _positionIncrement;
     _baseServo.moveToPosition(_basePosition);
 }
 
-void Base::turnRight(int increment = 10) {
-    _basePosition += increment;
+void Base::turnRight() {
+    _basePosition += _positionIncrement;
     _baseServo.moveToPosition(_basePosition);
 }
