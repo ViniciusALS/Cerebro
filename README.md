@@ -8,20 +8,28 @@ The goal of this project is to control a robotic arm using OpenBCI's Cyton Board
   <img src="./.github/resources/robotic arm.jpg" height="150px">
 </p>
 
--------------------------------
 
-## Hardware
+>
+> ## Team
+>
+> Vinicius de A. L. e Souza - N01299468 - Electronics Engineering Technology - Third Year - Humber Institute of Technology and Advanced Learning
+>
+> Yongsun Lim - N01283910 - Electronics Engineering Technology - Third Year - Humber Institute of Technology and Advanced Learning
+
+
+### Hardware Used
 
 * [OpenBCI's Cyton Board](https://docs.openbci.com/docs/02Cyton/CytonLanding)
 * [OpenBCI's Ultracortex Mark IV Headset](https://docs.openbci.com/docs/04AddOns/01-Headwear/MarkIV)
 * Mechanical Arm Kit
 * Custom made Arduino Uno compatible board
 
+-----------------------------
 
--------------------------------
+### Project Structure
 
-### Team
+This project is structured in three main components:
 
-Vinicius de A. L. e Souza - N01299468 - Electronics Engineering Technology - Third Year - Humber Institute of Technology and Advanced Learning
-
-Yongsun Lim - N01283910 - Electronics Engineering Technology - Third Year - Humber Institute of Technology and Advanced Learning
+* [The Arduino Code](https://github.com/ViniciusALS/Cerebro/tree/master/Arduino%20Code)
+* The Brain Waves Analysis
+* The Board Design
