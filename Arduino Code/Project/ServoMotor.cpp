@@ -34,8 +34,4 @@ void ServoMotor::moveToPosition(byte value){
     }
     
     _previousAngle = _angle;
-    
-//    Serial.print("servo moved to: ");
-//    
-//    Serial.println(_angle);
 }
