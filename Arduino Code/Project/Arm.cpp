@@ -5,20 +5,25 @@ Arm::Arm() {}
 Arm::~Arm() {}
 
 void Arm::begin() {
+    // Sets components initial values
     _frontArmServo.begin(FRONT_ARM_SERVO_PIN, _frontArmMinAngle, _frontArmMaxAngle);
     _backArmServo.begin(BACK_ARM_SERVO_PIN, _backArmMinAngle, _backArmMaxAngle);
     _myClaw.begin();
 
+    // Sets arm initial position
     _myClaw.open();
     _frontArmServo.moveToPosition(_FrontArmPosition.RETRACTED);
     _backArmServo.moveToPosition(_BackArmPosition.RETRACTED);
+
+    // Sets arm initial state
     isGrabbing = false;
 }
 
 void Arm::toggle() {
 
-    Serial.println("toggling...");
     if (isGrabbing){
+        // Move arm to release position
+        
         _frontArmServo.moveToPosition(_FrontArmPosition.REACHING);
         _backArmServo.moveToPosition(_BackArmPosition.REACHING);
         delay(500);
@@ -31,7 +36,9 @@ void Arm::toggle() {
         
         isGrabbing = false;            
     }
-    else {        
+    else {      
+        // Move arm to grabbing position  
+        
         _frontArmServo.moveToPosition(_FrontArmPosition.REACHING);
         _backArmServo.moveToPosition(_BackArmPosition.REACHING);
         delay(500);
