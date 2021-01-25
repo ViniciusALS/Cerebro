@@ -4,11 +4,11 @@
 Arm::Arm() {}
 Arm::~Arm() {}
 
-void Arm::begin() {
+void Arm::init() {
     // Sets components initial values
     _frontArmServo.begin(FRONT_ARM_SERVO_PIN, _frontArmMinAngle, _frontArmMaxAngle);
     _backArmServo.begin(BACK_ARM_SERVO_PIN, _backArmMinAngle, _backArmMaxAngle);
-    _myClaw.begin();
+    _myClaw.init();
 
     // Sets arm initial position
     _myClaw.open();

@@ -3,9 +3,9 @@
 Claw::Claw() {}
 Claw::~Claw() {}
 
-void Claw::begin() {
+void Claw::init() {
     // Sets component initial value
-    _clawServo.begin(CLAW_SERVO_PIN, _clawMinAngle, _clawMaxAngle);
+    _clawServo.init(CLAW_SERVO_PIN, _clawMinAngle, _clawMaxAngle);
 }
 
 void Claw::open() {

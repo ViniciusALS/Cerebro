@@ -11,7 +11,7 @@ class Claw {
         Claw();
         ~Claw();
 
-        void begin();
+        void init();
 
         void open();
         void close();

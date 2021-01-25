@@ -3,10 +3,10 @@
 RoboticArm::RoboticArm() {}
 RoboticArm::~RoboticArm() {}
 
-void RoboticArm::begin() {
+void RoboticArm::init() {
     // Sets components initial values
-    _myArm.begin();
-    _myBase.begin();
+    _myArm.init();
+    _myBase.init();
 }
 
 void RoboticArm::movementChoice(int choice){

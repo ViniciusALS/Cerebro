@@ -12,7 +12,7 @@ class Arm {
         Arm();  
         ~Arm();
 
-        void begin();
+        void init();
         void toggle();
        
     private:

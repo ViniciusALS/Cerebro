@@ -10,7 +10,7 @@ class ServoMotor {
         ServoMotor();
         ~ServoMotor();
         
-        void begin(int pin, int minAngle, int maxAngle);
+        void init(int pin, int minAngle, int maxAngle);
         void moveToPosition(byte value);
 
     private:

@@ -3,7 +3,7 @@
 ServoMotor::ServoMotor(){}
 ServoMotor::~ServoMotor(){}
         
-void ServoMotor::begin(int pin, int minAngle, int maxAngle) {
+void ServoMotor::init(int pin, int minAngle, int maxAngle) {
     _myServo.attach(pin); 
     
     if (minAngle < 0)

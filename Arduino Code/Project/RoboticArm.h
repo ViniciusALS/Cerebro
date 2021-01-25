@@ -11,7 +11,7 @@ class RoboticArm {
         RoboticArm();  
         ~RoboticArm();
 
-        void begin();
+        void init();
         void movementChoice(int choice);
        
 

@@ -11,7 +11,7 @@ class Base {
         Base();
         ~Base();
 
-        void begin();
+        void init();
 
         void turnLeft(int increment = 10);
         void turnRight(int increment = 10);

@@ -9,7 +9,7 @@ void setup() {
     Serial.begin(9600);
 
     // Sets components initial values
-    myRoboticArm.begin();
+    myRoboticArm.init();
 }
 
 void loop() {
