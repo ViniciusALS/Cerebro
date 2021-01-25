@@ -10,9 +10,9 @@ The goal of this project is to control a robotic arm using OpenBCI's Cyton Board
 
 > ## Institution
 >
-> Humber Institute of Technology and Advanced Learning 
->
 > <a href="https://humber.ca/"><p align="center"><img src=".github/resources/humberCollege.png" height="40px"/></p></a>
+>
+> Humber Institute of Technology and Advanced Learning 
 >
 > ## Team
 >
