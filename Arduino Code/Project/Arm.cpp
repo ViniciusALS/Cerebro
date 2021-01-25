@@ -16,12 +16,12 @@ void Arm::init() {
     _backArmServo.moveToPosition(_BackArmPosition.RETRACTED);
 
     // Sets arm initial state
-    isGrabbing = false;
+    _isGrabbing = false;
 }
 
 void Arm::toggle() {
 
-    if (isGrabbing){
+    if (_isGrabbing){
         // Move arm to release position
         
         _frontArmServo.moveToPosition(_FrontArmPosition.REACHING);
@@ -34,7 +34,7 @@ void Arm::toggle() {
         _frontArmServo.moveToPosition(_FrontArmPosition.RETRACTED);
         _backArmServo.moveToPosition(_BackArmPosition.RETRACTED);
         
-        isGrabbing = false;            
+        _isGrabbing = false;            
     }
     else {      
         // Move arm to grabbing position  
@@ -49,6 +49,6 @@ void Arm::toggle() {
         _frontArmServo.moveToPosition(_FrontArmPosition.RAISED);
         _backArmServo.moveToPosition(_BackArmPosition.RAISED);
 
-        isGrabbing = true;
+        _isGrabbing = true;
     }
 }

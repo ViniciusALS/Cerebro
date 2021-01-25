@@ -21,7 +21,7 @@ class Arm {
         ServoMotor _backArmServo;
         Claw _myClaw;
 
-        bool isGrabbing;
+        bool _isGrabbing;
 
         
         const int _frontArmMinAngle = 0;
