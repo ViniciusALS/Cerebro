@@ -5,7 +5,7 @@
 
 # 🧠 CEREBRO
 
-The goal of this project is to control a robotic arm using OpenBCI's Cyton Board to detect brain waves and with the help of machine learning algorithms determine the user's intentions to create an Humam - Machine interface.
+The goal of this project is to control a robotic arm using OpenBCI's Cyton Board to detect brain waves and with the help of machine learning algorithms determine the user's intentions to create an Human - Machine interface.
 
 <p align="center">
   <img src="./.github/resources/openbci logo.png" height="150px"/>
@@ -52,7 +52,7 @@ This project is structured in three main components:
 
 ### Contributions & Code of Conduct
 
-Eventhough this project on the time being is intended as the final project for the for the Electronics Engineering Technology program at Humber Institute of Technology and Advanced Learning of the previously listed team members and is not intended to receive any external contribution, the project will remain open to access. Therefore, any interaction must still follow the [contributions guide lines](.github/ISSUE_TEMPLATE/) and [code of conduct](CODE_OF_CONDUCT.md) of the project.
+Even though this project, for the time being, is intended as the final project for the Electronics Engineering Technology program at Humber Institute of Technology and Advanced Learning of the previously listed team members and is not intended to receive any external contribution, the project will remain open to access. Therefore, any interaction must still follow the [contributions guidelines](.github/ISSUE_TEMPLATE/) and [code of conduct](CODE_OF_CONDUCT.md) of the project.
 
 ------------------------------
 
