@@ -16,6 +16,7 @@ The goal of this project is to control a robotic arm using OpenBCI's Cyton Board
 >
 > Yongsun Lim - N01283910 - Electronics Engineering Technology - Third Year - Humber Institute of Technology and Advanced Learning
 
+------------------------------
 
 ### Hardware Used
 
@@ -33,3 +34,9 @@ This project is structured in three main components:
 * [The Arduino Code](https://github.com/ViniciusALS/Cerebro/tree/master/Arduino%20Code)
 * The Brain Waves Analysis
 * The Board Design
+
+-----------------------------
+
+### Contributions & Code of Conduct
+
+Eventhough this project on the time being is intended as the final project for the for the Electronics Engineering Technology program at Humber Institute of Technology and Advanced Learning of the previously listed team members and is not intended to receive any external contribution, the project will remain open to access. Therefore, any interaction must still follow the [contributions guide lines](.github/ISSUE_TEMPLATE/) and [code of conduct](CODE_OF_CONDUCT.md) of the project.
