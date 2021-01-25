@@ -4,6 +4,7 @@ Claw::Claw() {}
 Claw::~Claw() {}
 
 void Claw::begin() {
+    // Sets component initial value
     _clawServo.begin(CLAW_SERVO_PIN, _clawMinAngle, _clawMaxAngle);
 }
 
