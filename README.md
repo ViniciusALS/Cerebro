@@ -1,3 +1,8 @@
+<p align="right">
+	<img src="https://img.shields.io/github/license/ViniciusALS/Cerebro" alt="license badge">
+  <img src="https://img.shields.io/github/last-commit/ViniciusALS/Cerebro" alt="last commit badge">
+</p>
+
 # 🧠 CEREBRO
 
 The goal of this project is to control a robotic arm using OpenBCI's Cyton Board to detect brain waves and with the help of machine learning algorithms determine the user's intentions to create an Humam - Machine interface.
