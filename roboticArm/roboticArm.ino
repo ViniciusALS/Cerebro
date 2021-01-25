@@ -1,32 +1,38 @@
+#include "Arduino.h"
 #include "Arm.h"
+#include "Base.h"
 
  
 String choice;
 
-// Instanciate parts of robotic arm
-Arm myArm;
+// Instanciates robotic arm
+//Arm myArm;
 
+Base myBase;
 
 void setup() {
     Serial.begin(9600);
 
-    myArm.begin();
+    // Initialize values for robotic arm components
+    //myArm.begin();
+
+    myBase.begin();
 }
 
 void loop() {
 
-    while (Serial.available() > 0) {
-        choice = Serial.readString();
+//    while (Serial.available()) {
+//        choice = Serial.readString();
+//
+//        myArm.movementChoice(choice);
+//
+//        Serial.print("You entered: ");
+//        Serial.println(choice);
+//    }
 
-        myArm.move(choice);
-
-        Serial.print("You entered: ");
-        Serial.println(choice);
-    }
-
-    if (Serial.available <= 0){
-        myArm.wait();
-    }
+//    if (Serial.available() <= 0){
+//        myArm.movementChoice("await");
+//    }
 
     delay(1000);
 }

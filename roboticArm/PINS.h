@@ -11,6 +11,6 @@
 #define CLAW_SERVO_PIN          11
 #define FRONT_ARM_SERVO_PIN     10
 #define BACK_ARM_SERVO_PIN      9
-#define BOTTOM_SERVO_PIN        6
+#define BASE_SERVO_PIN        6
 
 #endif
