@@ -48,3 +48,11 @@ This project is structured in three main components:
 ### Contributions & Code of Conduct
 
 Eventhough this project on the time being is intended as the final project for the for the Electronics Engineering Technology program at Humber Institute of Technology and Advanced Learning of the previously listed team members and is not intended to receive any external contribution, the project will remain open to access. Therefore, any interaction must still follow the [contributions guide lines](.github/ISSUE_TEMPLATE/) and [code of conduct](CODE_OF_CONDUCT.md) of the project.
+
+------------------------------
+
+### License
+
+This project is protected under a [MIT License](./LICENSE).
+
+A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
