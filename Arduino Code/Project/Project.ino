@@ -4,7 +4,6 @@
  
 int choice;
 
-// Instantiates robotic arm
 RoboticArm myRoboticArm;
 
 void setup() {
