@@ -36,7 +36,7 @@ The goal of this project is to control a robotic arm using OpenBCI's Cyton Board
 * [OpenBCI's Cyton Board](https://docs.openbci.com/docs/02Cyton/CytonLanding)
 * [OpenBCI's Ultracortex Mark IV Headset](https://docs.openbci.com/docs/04AddOns/01-Headwear/MarkIV)
 * Mechanical Arm Kit
-* Custom made Arduino Uno compatible board
+* Custom made Arduino Uno compatible board (TODO)
 
 -----------------------------
 
@@ -45,8 +45,8 @@ The goal of this project is to control a robotic arm using OpenBCI's Cyton Board
 This project is structured in three main components:
 
 * [The Arduino Code](https://github.com/ViniciusALS/Cerebro/tree/master/Arduino%20Code)
-* The Brain Waves Analysis
-* The Board Design
+* The Brain Waves Analysis		(TODO)
+* The Board Design 			(TODO)
 
 -----------------------------
 
