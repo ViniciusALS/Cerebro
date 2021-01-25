@@ -22,8 +22,6 @@ The goal of this project is to control a robotic arm using OpenBCI's Cyton Board
 
 ### Team
 
-Vinicius de A. L. e Souza - N01299468
-Electronics Engineering Technology - Third Year - Humber Institute of Technology and Advanced Learning
+Vinicius de A. L. e Souza - N01299468 - Electronics Engineering Technology - Third Year - Humber Institute of Technology and Advanced Learning
 
-Yongsun Lim - N01283910
-Electronics Engineering Technology - Third Year - Humber Institute of Technology and Advanced Learning
+Yongsun Lim - N01283910 - Electronics Engineering Technology - Third Year - Humber Institute of Technology and Advanced Learning
