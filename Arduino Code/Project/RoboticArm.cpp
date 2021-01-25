@@ -5,7 +5,7 @@ RoboticArm::RoboticArm() {}
 RoboticArm::~RoboticArm() {}
 
 void RoboticArm::begin() {
-//    _myArm.begin();
+    _myArm.begin();
     _myBase.begin();
 }
 
