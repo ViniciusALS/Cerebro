@@ -20,8 +20,5 @@ void loop() {
         choice = Serial.parseInt();
 
         myRoboticArm.movementChoice(choice);
-
-        Serial.print("You entered: ");
-        Serial.println(choice);
     }
 }
