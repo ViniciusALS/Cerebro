@@ -50,13 +50,10 @@ This project is structured in three main components:
 
 -----------------------------
 
-### Project Structure
+### Softwares Used
 
-This project is structured in three main components:
-
-* [The Robotic Arm Code](https://github.com/ViniciusALS/Cerebro/tree/master/Arduino%20Code)
-* The Brain Waves Analysis		(TODO)
-* The Board Design 			(TODO)
+* [Arduino IDE](https://www.arduino.cc/en/software)
+* [Visual Studio Code](https://code.visualstudio.com/)
 
 -----------------------------
 
