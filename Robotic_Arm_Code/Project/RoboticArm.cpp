@@ -11,20 +11,20 @@ void RoboticArm::init() {
 
 void RoboticArm::movementChoice(int choice){
 
-    // Awaits for another command
-    if (choice == 0){
-        return;
-    }
+	switch(choice){
+		case 1:
+			_myBase.turnLeft();
+			break;
 
-    if (choice == 1){
-        _myBase.turnLeft();
-    }
+		case 2:
+			_myBase.turnRight();
+			break;
 
-    if (choice == 2){
-        _myBase.turnRight();
-    }
+		case 3:
+			_myArm.toggle();
+			break;
 
-    if (choice == 3){
-        _myArm.toggle();
-    }       
+		default:		// Awaits for another command
+			return;
+	}    
 }
