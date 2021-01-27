@@ -4,7 +4,7 @@
   <img src="../.github/resources/robotic arm.jpg" height="200px"/>
 </p>
 
-The Robotic Arm code is build around an [Arduino UNO](https://store.arduino.cc/usa/arduino-uno-rev3) using the [Arduino IDE](https://www.arduino.cc/en/software).
+The Robotic Arm code is built around an [Arduino UNO](https://store.arduino.cc/usa/arduino-uno-rev3) using the [Arduino IDE](https://www.arduino.cc/en/software).
 
 
 ### Getting Started
