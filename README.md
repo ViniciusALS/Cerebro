@@ -46,7 +46,7 @@ This project is structured in three main components:
 
 * [OpenBCI's Cyton Board](https://docs.openbci.com/docs/02Cyton/CytonLanding)
 * [OpenBCI's Ultracortex Mark IV Headset](https://docs.openbci.com/docs/04AddOns/01-Headwear/MarkIV)
-* Mechanical Arm Kit
+* [Mechanical Arm Kit](https://www.amazon.ca/gp/product/B07P93J8X9/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1)
 * Custom made Arduino Uno compatible board (TODO)
 
 -----------------------------
