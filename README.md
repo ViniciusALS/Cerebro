@@ -35,7 +35,8 @@ The goal of this project is to control a robotic arm using OpenBCI's Cyton Board
 
 This project is structured in three main components:
 
-* [The Robotic Arm Code](https://github.com/ViniciusALS/Cerebro/tree/master/Arduino%20Code)
+* [The Robotic Arm Code](Robotic_Arm_Code)
+* [The Training Data Acquisition](Training_Data_Acquisition)
 * The Brain Waves Analysis		(TODO)
 * The Board Design 			(TODO)
 

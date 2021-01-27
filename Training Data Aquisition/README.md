@@ -1,3 +1,0 @@
-# Training Data Aquisition
-
-TODO
