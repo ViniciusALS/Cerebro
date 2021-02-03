@@ -35,6 +35,7 @@ The goal of this project is to control a robotic arm using OpenBCI's Cyton Board
 
 * [The Robotic Arm Code](Robotic_Arm_Code)
 * [The Brain Waves Analysis](Brain_Waves_Analysis)
+  * [Training Data Acquisition](Brain_Waves_Analysis/Training_Data_Acquisition)
 * The Board Design 			(TODO)
 
 ------------------------------
