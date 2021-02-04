@@ -6,43 +6,55 @@ import brainflow
 from brainflow.board_shim import BoardShim, BrainFlowInputParams
 from brainflow.data_filter import DataFilter, FilterTypes, AggOperations
 
-def main():
-    BoardShim.enable_dev_board_logger()
+def create_parser_argument_list():
 
-    parser = argparse.ArgumentParser()
+	parser = argparse.ArgumentParser()
     # use docs to check which parameters are required for specific board, e.g. for Cyton - set serial port
-    parser.add_argument('--timeout', type=int, help='timeout for device discovery or connection', required=False,
-                        default=0)
+    parser.add_argument('--timeout', type=int, help='timeout for device discovery or connection', required=False, default=0)
     parser.add_argument('--ip-port', type=int, help='ip port', required=False, default=0)
-    parser.add_argument('--ip-protocol', type=int, help='ip protocol, check IpProtocolType enum', required=False,
-                        default=0)
+    parser.add_argument('--ip-protocol', type=int, help='ip protocol, check IpProtocolType enum', required=False, default=0)
     parser.add_argument('--ip-address', type=str, help='ip address', required=False, default='')
     parser.add_argument('--serial-port', type=str, help='serial port', required=False, default='')
     parser.add_argument('--mac-address', type=str, help='mac address', required=False, default='')
     parser.add_argument('--other-info', type=str, help='other info', required=False, default='')
     parser.add_argument('--streamer-params', type=str, help='streamer params', required=False, default='')
     parser.add_argument('--serial-number', type=str, help='serial number', required=False, default='')
-    parser.add_argument('--board-id', type=int, help='board id, check docs to get a list of supported boards',
-                        required=True)
+    parser.add_argument('--board-id', type=int, help='board id, check docs to get a list of supported boards', required=True)
     parser.add_argument('--file', type=str, help='file', required=False, default='')
-    args = parser.parse_args()
+    
+	arguments = parser.parse_args()
 
-    params = BrainFlowInputParams()
-    params.ip_port = args.ip_port
-    params.serial_port = args.serial_port
-    params.mac_address = args.mac_address
-    params.other_info = args.other_info
-    params.serial_number = args.serial_number
-    params.ip_address = args.ip_address
-    params.ip_protocol = args.ip_protocol
-    params.timeout = args.timeout
-    params.file = args.file
+	return arguments
 
-    board = BoardShim(args.board_id, params)
+
+def sets_brainflow_input_parameters(arguments):
+	parameters = BrainFlowInputParams()
+
+    parameters.ip_port = arguments.ip_port
+    parameters.serial_port = arguments.serial_port
+    paraparametersms.mac_address = arguments.mac_address
+    parameters.other_info = arguments.other_info
+    parameters.serial_number = arguments.serial_number
+    parameters.ip_address = arguments.ip_address
+    parameters.ip_protocol = arguments.ip_protocol
+    parameters.timeout = arguments.timeout
+    parameters.file = arguments.file
+
+	return parameters
+
+
+def main():
+    BoardShim.enable_dev_board_logger()
+
+    arguments = create_shell_argument_list()
+
+    parameters = sets_brainflow_input_parameters(arguments)
+
+    board = BoardShim(arguments.board_id, parameters)
     board.prepare_session()
 
     # board.start_stream () # use this for default options
-    board.start_stream(45000, args.streamer_params)
+    board.start_stream(45000, arguments.streamer_params)
     time.sleep(10)
     # data = board.get_current_board_data (256) # get latest 256 packages or less, doesnt remove them from internal buffer
     data = board.get_board_data()  # get all data and remove it from internal buffer
