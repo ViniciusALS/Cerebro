@@ -5,12 +5,8 @@ function App() {
         <div className="App">
             <header className="App-header">
                 <h1>Cerebro</h1>
+				<h2>Training Data Acquisition</h2>
             </header>
-            <footer className="App-footer">
-                <h2>Made by:</h2>
-                <h3>Vinicius de A. L. e Souza - N01299468</h3>
-                <h3>Yongsun Lim - N01283910</h3>
-            </footer>
         </div>
     );
 }
