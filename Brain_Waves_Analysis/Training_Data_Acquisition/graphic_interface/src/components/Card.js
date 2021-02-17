@@ -6,12 +6,14 @@ class Card extends React.Component {
 
 	constructor(props) {
 		super(props);
-		this.classNames = "card " + this.props.className;
+		this.state = {
+			classNames: "card " + props.className
+		};
 	}
 
 	render() {
 		return (
-			<div className={this.classNames}>
+			<div className={this.state.classNames}>
 				{this.props.children}
 			</div>
 		);
