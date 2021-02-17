@@ -2,7 +2,6 @@ import React from 'react';
 
 import "./home.css";
 
-import Card from "../components/Card.js";
 import Form from "../components/Form.js"; 
 import Footer from "../components/Footer.js";
 
