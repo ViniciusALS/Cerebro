@@ -5,11 +5,7 @@
 		- uplift form data
 		- page router
 		- dinamic pin selection
-
-
-
 */
-
 
 
 import React from 'react';
