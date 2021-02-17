@@ -29,6 +29,9 @@
     "directories": {
       "buildResources": "public"
     },
+    "win": {
+      "icon": "build/favicon.ico"
+    },
     "target": "zip"
   },
   "eslintConfig": {
