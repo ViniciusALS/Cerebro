@@ -13,6 +13,7 @@ import React from 'react';
 import "./form.css";
 
 import Card from "./Card.js";
+import Button from "./Button/Button.js";
 
 class Form extends React.Component {
 
@@ -23,7 +24,8 @@ class Form extends React.Component {
 				<h2>Port:</h2>
 				<h2>Session Duration</h2>
 				<h2>Pin Connection:</h2>
-				<h2>START</h2>
+				
+				<Button>Start</Button>
 			</Card>
 		);
 	}
