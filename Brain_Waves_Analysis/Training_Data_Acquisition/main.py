@@ -1,7 +1,8 @@
 from src.GUI import GUI
-import src.Cyton_acquisition as Cyton_acquisition
+from src.Board import Board 
 import time
 import random
+import numpy as np
 
 
 
@@ -9,16 +10,20 @@ def main():
 
 	state = chooseRandomState()
 	gui = GUI(state)
+	board = Board()
 
-	shouldContinue = True
-	while shouldContinue:
 
-		shouldContinue
-		state = chooseRandomState(state)
-		time.sleep(5)
-		gui.loadImage(state)
-
+	state = chooseRandomState(state)
+	board.startDataAcquisition()
+	gui.loadImage(state)
+	time.sleep(10)
+	egg_data = board.getEGG_Data()
+	board.releaseBoardSession()
 	gui.closeImage()
+
+	np.savetxt('samples/test2.csv', egg_data, delimiter=',', fmt='%d')
+
+	
 
 
 def chooseRandomState(prevState = "rest"):
