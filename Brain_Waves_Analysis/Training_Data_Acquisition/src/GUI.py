@@ -6,10 +6,10 @@ class GUI:
 
 	__gui_image = {}
 	
-	__gui_image["moveBothHands"] = Image.open("resources/moveBoth.png")
-	__gui_image["moveLeftHand"] = Image.open("./resources/moveLeft.png")
-	__gui_image["moveRightHand"] = Image.open("./resources/moveRight.png")
-	__gui_image["rest"] = Image.open("./resources/rest.png")
+	__gui_image["moveBothHands"] = Image.open("Brain_Waves_Analysis/Training_Data_Acquisition/src/resources/moveBoth.png")
+	__gui_image["moveLeftHand"] = Image.open("Brain_Waves_Analysis/Training_Data_Acquisition/src/resources/moveLeft.png")
+	__gui_image["moveRightHand"] = Image.open("Brain_Waves_Analysis/Training_Data_Acquisition/src/resources/moveRight.png")
+	__gui_image["rest"] = Image.open("Brain_Waves_Analysis/Training_Data_Acquisition/src/resources/rest.png")
 
 
 	def __init__(self, state):
