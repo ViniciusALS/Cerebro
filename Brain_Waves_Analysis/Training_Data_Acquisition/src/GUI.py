@@ -1,0 +1,36 @@
+from PIL import Image
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+
+class GUI:
+
+	__gui_image = {}
+	
+	__gui_image["moveBothHands"] = Image.open("resources/moveBoth.png")
+	__gui_image["moveLeftHand"] = Image.open("./resources/moveLeft.png")
+	__gui_image["moveRightHand"] = Image.open("./resources/moveRight.png")
+	__gui_image["rest"] = Image.open("./resources/rest.png")
+
+
+	def __init__(self, state):
+		self.configureMatplot()
+		self.loadImage(state)
+
+
+	def configureMatplot(self):
+		plt.ion()
+		plt.axis('off')
+		plt.show()
+
+	
+	def loadImage(self, state):
+		plt.imshow(self.__gui_image[state])
+		self.pausePlotToLoadImage()
+
+
+	def pausePlotToLoadImage(self): # matplotlib needs to be paused for a fraction of a second
+		plt.pause(0.001)			# in order to fully load image.
+
+
+	def closeImage(self):
+		plt.close()
