@@ -6,7 +6,7 @@ from brainflow import BoardIds
 from brainflow.board_shim import BoardShim, BrainFlowInputParams
 
 
-class Acquisition:
+class Board:
 
 	def __init__(self):
 		
@@ -14,7 +14,7 @@ class Acquisition:
 		self.__parameters = self.__setBoardParameters()
 	
 		self.__board = self.__setBoard()
-		
+
 		self.__board.prepare_session()
 
    
@@ -28,7 +28,11 @@ class Acquisition:
 		data = self.__board.get_board_data() 
 
 		eeg_channels = BoardShim.get_eeg_channels(self.__board_ID)
-		return data[eeg_channels]
+		eeg_data = data[eeg_channels]
+
+		eeg_data = np.multiply(eeg_data, 1/905969556)
+
+		return eeg_data
 	
 
 	def releaseBoardSession(self):
