@@ -1,2 +1,3 @@
 samples/*.*
 !samples/.gitkeep
+src/__pycache__
