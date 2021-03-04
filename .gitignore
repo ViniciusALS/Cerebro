@@ -1,1 +1,4 @@
-Training Data Aquisition/testing.py
+Brain_Waves_Analysis/Training_Data_Acquisition/samples/*.*
+!Brain_Waves_Analysis/Training_Data_Acquisition/samples/.gitkeep
+
+Brain_Waves_Analysis/Training_Data_Acquisition/src/__pycache__
