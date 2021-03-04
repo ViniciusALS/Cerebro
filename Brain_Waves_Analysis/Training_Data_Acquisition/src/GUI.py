@@ -14,7 +14,6 @@ class GUI:
 
 	def __init__(self, state):
 		self.configureMatplot()
-		self.loadImage(state)
 
 
 	def configureMatplot(self):
