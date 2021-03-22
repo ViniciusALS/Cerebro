@@ -2,29 +2,58 @@ from src.GUI import GUI
 from src.Board import Board 
 import time
 import random
+import os
 import numpy as np
 
 
-
 def main():
-
 	state = chooseRandomState()
-	gui = GUI(state)
+	
+	for i in range(10):
+		state = chooseRandomState(state)
+		samplePath = determinesNextSamplePath(state)
+		sample = acquireSample(state)
+		saveSample(sample, samplePath)
+	
+
+def determinesNextSamplePath(state):
+	samplesDir = "C:/Users/vinic/Documents/Humber College/Capstone/code/Cerebro/Brain_Waves_Analysis/Training_Data_Acquisition/samples"
+	stateSamplesDir = os.path.join(samplesDir, state)
+
+	listOfSamples = os.listdir(stateSamplesDir)
+	
+	listOfSamples.remove('.gitkeep')
+
+	listOfSamples.sort() 
+	
+	if not listOfSamples:
+		sampleFileName = "0.csv"
+	
+	else:
+		lastSample = str(listOfSamples[-1])
+		lastSampleNumber = int(lastSample.replace('.csv', ''))
+		sampleFileName = str(lastSampleNumber + 1)
+
+	sampleFileName = os.path.join(stateSamplesDir, sampleFileName)
+
+	return sampleFileName
+
+def acquireSample(state):
+	gui = GUI()
 	board = Board()
 
-
-	state = chooseRandomState(state)
 	board.startDataAcquisition()
 	gui.loadImage(state)
 	time.sleep(10)
-	egg_data = board.getEGG_Data()
+
+	sample = board.getEGG_Data()
 	board.releaseBoardSession()
 	gui.closeImage()
 
-	np.savetxt('samples/test2.csv', egg_data, delimiter=',', fmt='%d')
+	return sample
 
-	
-
+def saveSample(sample, samplePath):
+	np.savetxt(samplePath, sample, delimiter=', ', newline='\n', fmt='%f')
 
 def chooseRandomState(prevState = "rest"):
 	states = [
