@@ -9,7 +9,7 @@ import numpy as np
 def main():
 	state = chooseRandomState()
 	
-	for i in range(10):
+	for _ in range(10):
 		state = chooseRandomState(state)
 		samplePath = determinesNextSamplePath(state)
 		sample = acquireSample(state)
