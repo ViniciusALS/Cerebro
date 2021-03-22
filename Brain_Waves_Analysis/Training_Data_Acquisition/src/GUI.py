@@ -12,7 +12,7 @@ class GUI:
 	__gui_image["rest"] = Image.open("Brain_Waves_Analysis/Training_Data_Acquisition/src/resources/rest.png")
 
 
-	def __init__(self, state):
+	def __init__(self):
 		self.configureMatplot()
 
 
