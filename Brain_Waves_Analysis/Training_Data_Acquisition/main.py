@@ -33,7 +33,7 @@ def determinesNextSamplePath(state):
 		lastSample = str(listOfSamples[-1])
 		lastSampleNumber = int(lastSample.replace('.csv', ''))
 		sampleNumber = str(lastSampleNumber + 1)
-		sampleName = sampleNumber + ".csv"
+		sampleFileName = sampleNumber + ".csv"
 
 	sampleFileName = os.path.join(stateSamplesDir, sampleName)
 
