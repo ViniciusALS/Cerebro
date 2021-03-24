@@ -30,8 +30,6 @@ class Board:
 		eeg_channels = BoardShim.get_eeg_channels(self.__board_ID)
 		eeg_data = data[eeg_channels]
 
-		eeg_data = np.multiply(eeg_data, 1/905969556)
-
 		return eeg_data
 	
 
